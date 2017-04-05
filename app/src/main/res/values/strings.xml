@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Intent_call_internet</string>
+    <string name="internet">瀏覽網頁</string>
+    <string name="call1">呼叫打電話頁面</string>
+    <string name="call2">打電話</string>
+    <string name="map">顯示101地圖</string>
+</resources>
