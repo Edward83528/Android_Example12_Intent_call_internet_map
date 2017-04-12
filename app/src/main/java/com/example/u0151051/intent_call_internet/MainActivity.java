@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btn1, btn2, btn3, btn4;
@@ -50,7 +51,11 @@ public class MainActivity extends AppCompatActivity {
                     //要在 AndroidManifest.xml 中，加上<uses-permission id="android.permission.CALL_PHONE" />
                     Uri uri3 = Uri.parse("tel:0938495021");
                     Intent intent3 = new Intent(Intent.ACTION_CALL, uri3);
-                    startActivity(intent3);
+                    try {
+                        startActivity(intent3);
+                    } catch (Exception e) {
+                        Toast.makeText(MainActivity.this, "號碼是空號", Toast.LENGTH_SHORT);
+                    }
                     break;
                 case R.id.button4:
                     //利用Intent(我要做什麼事,uri);
